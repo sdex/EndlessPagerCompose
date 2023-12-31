@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
                             contentAlignment = Alignment.Center
                         ) {
                             Text(
-                                text = "Page: ${(page % 6)}\n(Real position: $page)",
+                                text = "Page: ${(page % pageCount)}\n(Real position: $page)",
                                 fontSize = 32.sp,
                                 modifier = Modifier.align(Alignment.Center),
                                 textAlign = TextAlign.Center,
