@@ -17,6 +17,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import dev.sdex.endlesspagercompose.ui.theme.EndlessPagerComposeTheme
 
+private const val PAGE_COUNT = 100000 //Int.MAX_VALUE
+
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalFoundationApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,8 +30,8 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     val pageCount = 6
-                    val pagerState = rememberPagerState(Int.MAX_VALUE / 2 - pageCount / 2) {
-                        Int.MAX_VALUE
+                    val pagerState = rememberPagerState(PAGE_COUNT / 2 - pageCount / 2) {
+                        PAGE_COUNT
                     }
                     VerticalPager(
                         state = pagerState,
